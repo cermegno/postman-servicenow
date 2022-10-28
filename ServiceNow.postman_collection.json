@@ -955,179 +955,6 @@
 					]
 				},
 				{
-					"name": "Create CMDB Linux server",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Accep",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"attributes\": {\r\n        \"name\": \"alblinux02\",\r\n        \"assigned_to\": \"17d4c4632fbf1010fb27d5ccf699b672\",\r\n        \"ram\": \"4\",\r\n        \"cpu_speed\": \"2000\",\r\n        \"cpu_count\": \"4\",\r\n        \"os\": \"Linux Red Hat\",\r\n        \"os_version\": \"RHEL 7.9\",\r\n        \"discovery_source\": \"ServiceNow\"\r\n    },\r\n    \"outbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"0e69726e97e611109da31c800153afc9\"\r\n        }\r\n    ],\r\n    \"inbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"5473baa297e611109da31c800153af6d\"\r\n        }\r\n    ]\r\n}"
-						},
-						"url": {
-							"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server",
-							"protocol": "https",
-							"host": [
-								"{{instance}}",
-								"service-now",
-								"com"
-							],
-							"path": [
-								"api",
-								"now",
-								"cmdb",
-								"instance",
-								"cmdb_ci_linux_server"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Create CMDB Linux server",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Accep",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"attributes\": {\r\n        \"name\": \"alblinux02\",\r\n        \"assigned_to\": \"17d4c4632fbf1010fb27d5ccf699b672\",\r\n        \"ram\": \"4\",\r\n        \"cpu_speed\": \"2000\",\r\n        \"cpu_count\": \"4\",\r\n        \"os\": \"Linux Red Hat\",\r\n        \"os_version\": \"RHEL 7.9\",\r\n        \"discovery_source\": \"ServiceNow\"\r\n    },\r\n    \"outbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"0e69726e97e611109da31c800153afc9\"\r\n        }\r\n    ],\r\n    \"inbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"5473baa297e611109da31c800153af6d\"\r\n        }\r\n    ]\r\n}"
-								},
-								"url": {
-									"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server",
-									"protocol": "https",
-									"host": [
-										"{{instance}}",
-										"service-now",
-										"com"
-									],
-									"path": [
-										"api",
-										"now",
-										"cmdb",
-										"instance",
-										"cmdb_ci_linux_server"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Set-Cookie",
-									"value": "JSESSIONID=D0EFC6D14831A4ACD1C5E5349AC723EB; Path=/; HttpOnly;Secure"
-								},
-								{
-									"key": "Set-Cookie",
-									"value": "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
-								},
-								{
-									"key": "Set-Cookie",
-									"value": "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
-								},
-								{
-									"key": "Set-Cookie",
-									"value": "glide_user_route=glide.af91618451bec9b8718e765cd6dd20cf; Max-Age=2147483647; Expires=Tue, 14-Nov-2090 04:49:20 GMT; Path=/; HttpOnly;Secure"
-								},
-								{
-									"key": "Set-Cookie",
-									"value": "glide_session_store=512D44ED97F2D1509DA31C800153AF11; Max-Age=1800; Expires=Thu, 27-Oct-2022 02:05:13 GMT; Path=/; HttpOnly;Secure"
-								},
-								{
-									"key": "Server-Timing",
-									"value": "sem_wait;dur=0, sesh_wait;dur=0"
-								},
-								{
-									"key": "Content-Encoding",
-									"value": "gzip"
-								},
-								{
-									"key": "X-Is-Logged-In",
-									"value": "true"
-								},
-								{
-									"key": "X-Transaction-ID",
-									"value": "952d44ed97f2"
-								},
-								{
-									"key": "LOCATION",
-									"value": "https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server/8f478366976a11109da31c800153af1a"
-								},
-								{
-									"key": "X-INBOUND-RELATION-COUNT",
-									"value": "1"
-								},
-								{
-									"key": "X-OUTBOUND-RELATION-COUNT",
-									"value": "1"
-								},
-								{
-									"key": "Pragma",
-									"value": "no-store,no-cache"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache,no-store,must-revalidate,max-age=-1"
-								},
-								{
-									"key": "Expires",
-									"value": "0"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 27 Oct 2022 01:35:13 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=20"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Server",
-									"value": "ServiceNow"
-								},
-								{
-									"key": "Strict-Transport-Security",
-									"value": "max-age=63072000; includeSubDomains"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"result\": {\n        \"outbound_relations\": [\n            {\n                \"sys_id\": \"8b47c366976a11109da31c800153af41\",\n                \"type\": {\n                    \"display_value\": \"Depends on::Used by\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_rel_type/1a9cb166f1571100a92eb60da2bce5c5\",\n                    \"value\": \"1a9cb166f1571100a92eb60da2bce5c5\"\n                },\n                \"target\": {\n                    \"display_value\": \"alblinux01 vol1\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci/0e69726e97e611109da31c800153afc9\",\n                    \"value\": \"0e69726e97e611109da31c800153afc9\"\n                }\n            }\n        ],\n        \"attributes\": {\n            \"os_address_width\": \"\",\n            \"firewall_status\": \"Intranet\",\n            \"attested_date\": \"\",\n            \"operational_status\": \"1\",\n            \"os_service_pack\": \"\",\n            \"cpu_core_thread\": \"\",\n            \"cpu_manufacturer\": \"\",\n            \"sys_updated_on\": \"2022-10-27 01:35:13\",\n            \"discovery_source\": \"ServiceNow\",\n            \"first_discovered\": \"2022-10-18 07:26:45\",\n            \"due_in\": \"\",\n            \"used_for\": \"Production\",\n            \"invoice_number\": \"\",\n            \"gl_account\": \"\",\n            \"sys_created_by\": \"admin\",\n            \"warranty_expiration\": \"\",\n            \"ram\": \"4\",\n            \"cpu_name\": \"\",\n            \"cpu_speed\": \"2000\",\n            \"owned_by\": \"\",\n            \"checked_out\": \"\",\n            \"kernel_release\": \"\",\n            \"sys_domain_path\": \"/\",\n            \"disk_space\": \"\",\n            \"classification\": \"Production\",\n            \"object_id\": \"\",\n            \"business_unit\": \"\",\n            \"maintenance_schedule\": \"\",\n            \"cost_center\": \"\",\n            \"attested_by\": \"\",\n            \"dns_domain\": \"\",\n            \"assigned\": \"\",\n            \"purchase_date\": \"\",\n            \"life_cycle_stage\": \"\",\n            \"short_description\": \"\",\n            \"cd_speed\": \"\",\n            \"floppy\": \"\",\n            \"managed_by\": \"\",\n            \"os_domain\": \"\",\n            \"last_discovered\": \"2022-10-27 01:35:13\",\n            \"can_print\": \"false\",\n            \"sys_class_name\": \"cmdb_ci_linux_server\",\n            \"manufacturer\": \"\",\n            \"cpu_count\": \"4\",\n            \"vendor\": \"\",\n            \"life_cycle_stage_status\": \"\",\n            \"model_number\": \"\",\n            \"assigned_to\": {\n                \"display_value\": \"Finance User\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/sys_user/17d4c4632fbf1010fb27d5ccf699b672\",\n                \"value\": \"17d4c4632fbf1010fb27d5ccf699b672\"\n            },\n            \"start_date\": \"\",\n            \"os_version\": \"RHEL 7.9\",\n            \"serial_number\": \"\",\n            \"cd_rom\": \"false\",\n            \"support_group\": \"\",\n            \"unverified\": \"false\",\n            \"correlation_id\": \"\",\n            \"attributes\": \"\",\n            \"asset\": {\n                \"display_value\": \"Unknown\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/alm_asset/4f47c366976a11109da31c800153af39\",\n                \"value\": \"4f47c366976a11109da31c800153af39\"\n            },\n            \"form_factor\": \"\",\n            \"cpu_core_count\": \"\",\n            \"skip_sync\": \"false\",\n            \"most_frequent_user\": \"\",\n            \"attestation_score\": \"\",\n            \"sys_updated_by\": \"admin\",\n            \"sys_created_on\": \"2022-10-18 07:26:45\",\n            \"sys_domain\": {\n                \"display_value\": \"global\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/sys_user_group/global\",\n                \"value\": \"global\"\n            },\n            \"cpu_type\": \"\",\n            \"install_date\": \"\",\n            \"asset_tag\": \"\",\n            \"dr_backup\": \"\",\n            \"hardware_substatus\": \"\",\n            \"fqdn\": \"\",\n            \"change_control\": \"\",\n            \"internet_facing\": \"true\",\n            \"delivery_date\": \"\",\n            \"hardware_status\": \"installed\",\n            \"install_status\": \"1\",\n            \"supported_by\": \"\",\n            \"name\": \"alblinux02\",\n            \"subcategory\": \"Computer\",\n            \"default_gateway\": \"\",\n            \"chassis_type\": \"\",\n            \"virtual\": \"false\",\n            \"assignment_group\": \"\",\n            \"managed_by_group\": \"\",\n            \"sys_id\": \"8f478366976a11109da31c800153af1a\",\n            \"po_number\": \"\",\n            \"checked_in\": \"\",\n            \"sys_class_path\": \"/!!/!2/!(/!!/!0\",\n            \"mac_address\": \"\",\n            \"company\": \"\",\n            \"justification\": \"\",\n            \"department\": \"\",\n            \"cost\": \"\",\n            \"comments\": \"\",\n            \"os\": \"Linux Red Hat\",\n            \"attestation_status\": \"Not Yet Reviewed\",\n            \"sys_mod_count\": \"0\",\n            \"monitor\": \"false\",\n            \"model_id\": {\n                \"display_value\": \"Unknown\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_model/d1577e2a97e611109da31c800153afb9\",\n                \"value\": \"d1577e2a97e611109da31c800153afb9\"\n            },\n            \"ip_address\": \"\",\n            \"duplicate_of\": \"\",\n            \"sys_tags\": \"\",\n            \"cost_cc\": \"USD\",\n            \"order_date\": \"\",\n            \"schedule\": \"\",\n            \"environment\": \"\",\n            \"due\": \"\",\n            \"attested\": \"false\",\n            \"location\": \"\",\n            \"category\": \"Hardware\",\n            \"fault_count\": \"0\",\n            \"lease_id\": \"\",\n            \"host_name\": \"\"\n        },\n        \"inbound_relations\": [\n            {\n                \"sys_id\": \"4747c366976a11109da31c800153af3d\",\n                \"type\": {\n                    \"display_value\": \"Depends on::Used by\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_rel_type/1a9cb166f1571100a92eb60da2bce5c5\",\n                    \"value\": \"1a9cb166f1571100a92eb60da2bce5c5\"\n                },\n                \"target\": {\n                    \"display_value\": \"Alberto Inventory App\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci/5473baa297e611109da31c800153af6d\",\n                    \"value\": \"5473baa297e611109da31c800153af6d\"\n                }\n            }\n        ]\n    }\n}"
-						}
-					]
-				},
-				{
 					"name": "Get CMDB relationship types",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1381,6 +1208,179 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create CMDB Linux server",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accep",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"attributes\": {\r\n        \"name\": \"alblinux02\",\r\n        \"assigned_to\": \"17d4c4632fbf1010fb27d5ccf699b672\",\r\n        \"ram\": \"4\",\r\n        \"cpu_speed\": \"2000\",\r\n        \"cpu_count\": \"4\",\r\n        \"os\": \"Linux Red Hat\",\r\n        \"os_version\": \"RHEL 7.9\",\r\n        \"discovery_source\": \"ServiceNow\"\r\n    },\r\n    \"outbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"0e69726e97e611109da31c800153afc9\"\r\n        }\r\n    ],\r\n    \"inbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"5473baa297e611109da31c800153af6d\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server",
+							"protocol": "https",
+							"host": [
+								"{{instance}}",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"cmdb",
+								"instance",
+								"cmdb_ci_linux_server"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create CMDB Linux server",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accep",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"attributes\": {\r\n        \"name\": \"alblinux02\",\r\n        \"assigned_to\": \"17d4c4632fbf1010fb27d5ccf699b672\",\r\n        \"ram\": \"4\",\r\n        \"cpu_speed\": \"2000\",\r\n        \"cpu_count\": \"4\",\r\n        \"os\": \"Linux Red Hat\",\r\n        \"os_version\": \"RHEL 7.9\",\r\n        \"discovery_source\": \"ServiceNow\"\r\n    },\r\n    \"outbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"0e69726e97e611109da31c800153afc9\"\r\n        }\r\n    ],\r\n    \"inbound_relations\": [\r\n        {\r\n            \"type\": \"1a9cb166f1571100a92eb60da2bce5c5\",\r\n            \"target\": \"5473baa297e611109da31c800153af6d\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server",
+									"protocol": "https",
+									"host": [
+										"{{instance}}",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"now",
+										"cmdb",
+										"instance",
+										"cmdb_ci_linux_server"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=D0EFC6D14831A4ACD1C5E5349AC723EB; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_user_route=glide.af91618451bec9b8718e765cd6dd20cf; Max-Age=2147483647; Expires=Tue, 14-Nov-2090 04:49:20 GMT; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_session_store=512D44ED97F2D1509DA31C800153AF11; Max-Age=1800; Expires=Thu, 27-Oct-2022 02:05:13 GMT; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "sem_wait;dur=0, sesh_wait;dur=0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Is-Logged-In",
+									"value": "true"
+								},
+								{
+									"key": "X-Transaction-ID",
+									"value": "952d44ed97f2"
+								},
+								{
+									"key": "LOCATION",
+									"value": "https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server/8f478366976a11109da31c800153af1a"
+								},
+								{
+									"key": "X-INBOUND-RELATION-COUNT",
+									"value": "1"
+								},
+								{
+									"key": "X-OUTBOUND-RELATION-COUNT",
+									"value": "1"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-store,no-cache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache,no-store,must-revalidate,max-age=-1"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 01:35:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=20"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "ServiceNow"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"outbound_relations\": [\n            {\n                \"sys_id\": \"8b47c366976a11109da31c800153af41\",\n                \"type\": {\n                    \"display_value\": \"Depends on::Used by\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_rel_type/1a9cb166f1571100a92eb60da2bce5c5\",\n                    \"value\": \"1a9cb166f1571100a92eb60da2bce5c5\"\n                },\n                \"target\": {\n                    \"display_value\": \"alblinux01 vol1\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci/0e69726e97e611109da31c800153afc9\",\n                    \"value\": \"0e69726e97e611109da31c800153afc9\"\n                }\n            }\n        ],\n        \"attributes\": {\n            \"os_address_width\": \"\",\n            \"firewall_status\": \"Intranet\",\n            \"attested_date\": \"\",\n            \"operational_status\": \"1\",\n            \"os_service_pack\": \"\",\n            \"cpu_core_thread\": \"\",\n            \"cpu_manufacturer\": \"\",\n            \"sys_updated_on\": \"2022-10-27 01:35:13\",\n            \"discovery_source\": \"ServiceNow\",\n            \"first_discovered\": \"2022-10-18 07:26:45\",\n            \"due_in\": \"\",\n            \"used_for\": \"Production\",\n            \"invoice_number\": \"\",\n            \"gl_account\": \"\",\n            \"sys_created_by\": \"admin\",\n            \"warranty_expiration\": \"\",\n            \"ram\": \"4\",\n            \"cpu_name\": \"\",\n            \"cpu_speed\": \"2000\",\n            \"owned_by\": \"\",\n            \"checked_out\": \"\",\n            \"kernel_release\": \"\",\n            \"sys_domain_path\": \"/\",\n            \"disk_space\": \"\",\n            \"classification\": \"Production\",\n            \"object_id\": \"\",\n            \"business_unit\": \"\",\n            \"maintenance_schedule\": \"\",\n            \"cost_center\": \"\",\n            \"attested_by\": \"\",\n            \"dns_domain\": \"\",\n            \"assigned\": \"\",\n            \"purchase_date\": \"\",\n            \"life_cycle_stage\": \"\",\n            \"short_description\": \"\",\n            \"cd_speed\": \"\",\n            \"floppy\": \"\",\n            \"managed_by\": \"\",\n            \"os_domain\": \"\",\n            \"last_discovered\": \"2022-10-27 01:35:13\",\n            \"can_print\": \"false\",\n            \"sys_class_name\": \"cmdb_ci_linux_server\",\n            \"manufacturer\": \"\",\n            \"cpu_count\": \"4\",\n            \"vendor\": \"\",\n            \"life_cycle_stage_status\": \"\",\n            \"model_number\": \"\",\n            \"assigned_to\": {\n                \"display_value\": \"Finance User\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/sys_user/17d4c4632fbf1010fb27d5ccf699b672\",\n                \"value\": \"17d4c4632fbf1010fb27d5ccf699b672\"\n            },\n            \"start_date\": \"\",\n            \"os_version\": \"RHEL 7.9\",\n            \"serial_number\": \"\",\n            \"cd_rom\": \"false\",\n            \"support_group\": \"\",\n            \"unverified\": \"false\",\n            \"correlation_id\": \"\",\n            \"attributes\": \"\",\n            \"asset\": {\n                \"display_value\": \"Unknown\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/alm_asset/4f47c366976a11109da31c800153af39\",\n                \"value\": \"4f47c366976a11109da31c800153af39\"\n            },\n            \"form_factor\": \"\",\n            \"cpu_core_count\": \"\",\n            \"skip_sync\": \"false\",\n            \"most_frequent_user\": \"\",\n            \"attestation_score\": \"\",\n            \"sys_updated_by\": \"admin\",\n            \"sys_created_on\": \"2022-10-18 07:26:45\",\n            \"sys_domain\": {\n                \"display_value\": \"global\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/sys_user_group/global\",\n                \"value\": \"global\"\n            },\n            \"cpu_type\": \"\",\n            \"install_date\": \"\",\n            \"asset_tag\": \"\",\n            \"dr_backup\": \"\",\n            \"hardware_substatus\": \"\",\n            \"fqdn\": \"\",\n            \"change_control\": \"\",\n            \"internet_facing\": \"true\",\n            \"delivery_date\": \"\",\n            \"hardware_status\": \"installed\",\n            \"install_status\": \"1\",\n            \"supported_by\": \"\",\n            \"name\": \"alblinux02\",\n            \"subcategory\": \"Computer\",\n            \"default_gateway\": \"\",\n            \"chassis_type\": \"\",\n            \"virtual\": \"false\",\n            \"assignment_group\": \"\",\n            \"managed_by_group\": \"\",\n            \"sys_id\": \"8f478366976a11109da31c800153af1a\",\n            \"po_number\": \"\",\n            \"checked_in\": \"\",\n            \"sys_class_path\": \"/!!/!2/!(/!!/!0\",\n            \"mac_address\": \"\",\n            \"company\": \"\",\n            \"justification\": \"\",\n            \"department\": \"\",\n            \"cost\": \"\",\n            \"comments\": \"\",\n            \"os\": \"Linux Red Hat\",\n            \"attestation_status\": \"Not Yet Reviewed\",\n            \"sys_mod_count\": \"0\",\n            \"monitor\": \"false\",\n            \"model_id\": {\n                \"display_value\": \"Unknown\",\n                \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_model/d1577e2a97e611109da31c800153afb9\",\n                \"value\": \"d1577e2a97e611109da31c800153afb9\"\n            },\n            \"ip_address\": \"\",\n            \"duplicate_of\": \"\",\n            \"sys_tags\": \"\",\n            \"cost_cc\": \"USD\",\n            \"order_date\": \"\",\n            \"schedule\": \"\",\n            \"environment\": \"\",\n            \"due\": \"\",\n            \"attested\": \"false\",\n            \"location\": \"\",\n            \"category\": \"Hardware\",\n            \"fault_count\": \"0\",\n            \"lease_id\": \"\",\n            \"host_name\": \"\"\n        },\n        \"inbound_relations\": [\n            {\n                \"sys_id\": \"4747c366976a11109da31c800153af3d\",\n                \"type\": {\n                    \"display_value\": \"Depends on::Used by\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/table/cmdb_rel_type/1a9cb166f1571100a92eb60da2bce5c5\",\n                    \"value\": \"1a9cb166f1571100a92eb60da2bce5c5\"\n                },\n                \"target\": {\n                    \"display_value\": \"Alberto Inventory App\",\n                    \"link\": \"https://dev97011.service-now.com/api/now/cmdb/instance/cmdb_ci/5473baa297e611109da31c800153af6d\",\n                    \"value\": \"5473baa297e611109da31c800153af6d\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
 				}
 			]
 		}
