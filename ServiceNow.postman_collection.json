@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f1878d55-ec91-44d5-a682-eaf59b54cb86",
+		"_postman_id": "c58c404f-b177-489a-ad2a-edfbaa64dca9",
 		"name": "ServiceNow",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2387182"
 	},
 	"item": [
 		{
@@ -64,6 +65,10 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "https://{{instance}}.service-now.com/api/now/table/incident",
 									"protocol": "https",
@@ -203,6 +208,10 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "https://{{instance}}.service-now.com/api/now/table/incident/22ad6afb2ffa241087a2d7492799b61f",
 									"protocol": "https",
@@ -304,7 +313,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"short_description\": \"Alberto testing 1234\",\r\n    \"urgency\": \"2\",\r\n    \"impact\": \"2\"\r\n}"
+							"raw": "{\r\n    \"short_description\": \"PowerStore 3000T – 4N0CMX3 – The drive ‘Drive_0_0_3’ is faulted (Part Number: ‘900-564-101’)\",\r\n    \"urgency\": \"2\",\r\n    \"impact\": \"2\"\r\n}"
 						},
 						"url": {
 							"raw": "https://{{instance}}.service-now.com/api/now/table/incident",
@@ -656,6 +665,10 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server",
 									"protocol": "https",
@@ -825,6 +838,10 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "https://{{instance}}.service-now.com/api/now/cmdb/instance/cmdb_ci_linux_server/3a290cc60a0a0bb400000bdb386af1cf",
 									"protocol": "https",
@@ -993,6 +1010,10 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "https://{{instance}}.service-now.com/api/now/table/cmdb_rel_type",
 									"protocol": "https",
@@ -1452,7 +1473,166 @@
 					"response": []
 				},
 				{
-					"name": "Item to cart - file STaaS",
+					"name": "Buy item - Deploy app",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sysparm_quantity\": 1,\r\n    \"variables\": {\r\n        \"vm_name\": \"vmtest01\",\r\n        \"application\": \"apache24\",\r\n        \"zone\": \"sin\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{instance}}.service-now.com/api/sn_sc/servicecatalog/items/7d9916c697a715909da31c800153afe8/order_now",
+							"protocol": "https",
+							"host": [
+								"{{instance}}",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"sn_sc",
+								"servicecatalog",
+								"items",
+								"7d9916c697a715909da31c800153afe8",
+								"order_now"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add item to cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accep",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sysparm_quantity\": 1,\r\n    \"variables\": {\r\n        \"vm_name\": \"albtest3_01\",\r\n        \"application\": \"apache24\",\r\n        \"zone\": \"sin\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{instance}}.service-now.com/api/sn_sc/servicecatalog/items/7d9916c697a715909da31c800153afe8/add_to_cart",
+									"protocol": "https",
+									"host": [
+										"{{instance}}",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"sn_sc",
+										"servicecatalog",
+										"items",
+										"7d9916c697a715909da31c800153afe8",
+										"add_to_cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server-Timing",
+									"value": "sem_wait;dur=0, sesh_wait;dur=0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_user_activity=U0N2M18xOmtLVTZWS0ZaTkU3RWZaWkZLSStUSDV4U1lQMUxhbEM1ZFhtcTFoUHJWbEE9OjVsNW1td3htV1F0dmlKODdHV2ZpdHdNdUdQUHNkckZRSlVoaEFjRXRHOVE9; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_node_id_for_js=2f303253419a7fc9e332ad15683b6cbf45bdd2d7cd718a5be6b5bb4e3861d934; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "glide_session_store=C9D1D99D97B531109DA31C800153AF8F; Max-Age=60; Expires=Mon, 09-Oct-2023 11:17:58 GMT; Path=/; HttpOnly;Secure"
+								},
+								{
+									"key": "X-Is-Logged-In",
+									"value": "true"
+								},
+								{
+									"key": "X-Transaction-ID",
+									"value": "d6f15599de60"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-store,no-cache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache,no-store,must-revalidate,max-age=-1"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Oct 2023 11:16:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=70"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "ServiceNow"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"cart_id\": \"e13e5212dbb2c010f5f698e9db9619c4\",\n        \"subtotal\": \"$0.00\",\n        \"items\": [\n            {\n                \"catalog_item_id\": \"7d9916c697a715909da31c800153afe8\",\n                \"quantity\": \"1\",\n                \"localized_price\": \"$0.00\",\n                \"price\": \"$0.00\",\n                \"recurring_frequency\": null,\n                \"localized_recurring_price\": \"$0.00\",\n                \"recurring_price\": \"$0.00\",\n                \"item_name\": \"Deploy Application on VM\",\n                \"cart_item_id\": \"daf19111973931109da31c800153af9a\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Item to cart - Pstore file STaaS",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1492,7 +1672,47 @@
 					"response": []
 				},
 				{
-					"name": "Item to cart - deploy app",
+					"name": "Item to cart - Pscale STaaS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accep",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sysparm_quantity\": 1,\r\n    \"variables\": {\r\n        \"host\": \"lseg01\",\r\n        \"size\": 30,\r\n        \"fs_name\": \"lsegfs02\",\r\n        \"mpoint\": \"/data2\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{instance}}.service-now.com/api/sn_sc/servicecatalog/items/30e12f4b2f20d15487a2d7492799b663/add_to_cart",
+							"protocol": "https",
+							"host": [
+								"{{instance}}",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"sn_sc",
+								"servicecatalog",
+								"items",
+								"30e12f4b2f20d15487a2d7492799b663",
+								"add_to_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Item to cart - Deploy app",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1509,7 +1729,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"sysparm_quantity\": 1,\r\n    \"variables\": {\r\n        \"vm_name\": \"albtest3_01\",\r\n        \"application\": \"apache24\",\r\n        \"zone\": \"sin\"\r\n    }\r\n}"
+							"raw": "{\r\n    \"sysparm_quantity\": 1,\r\n    \"variables\": {\r\n        \"vm_name\": \"lsegtest101\",\r\n        \"application\": \"apache24\",\r\n        \"zone\": \"sin\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "https://{{instance}}.service-now.com/api/sn_sc/servicecatalog/items/7d9916c697a715909da31c800153afe8/add_to_cart",
@@ -1827,7 +2047,7 @@
 		"basic": [
 			{
 				"key": "username",
-				"value": "admin",
+				"value": "finance1",
 				"type": "string"
 			},
 			{
